@@ -1,8 +1,5 @@
 package exercise.algorithm.microsoft100;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 第14题（数组）：
 题目：输入一个已经按升序排序过的数组和一个数字，
