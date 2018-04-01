@@ -56,6 +56,8 @@ public class T_20_StringToNumbers {
                         throw new MyException("溢出");
                     }
                     result -= digit;
+                }else{
+                    throw new MyException("存在非数字字符");
                 }
             }
         }else{
@@ -87,6 +89,24 @@ public class T_20_StringToNumbers {
         System.out.println(digit);             // 3
         */
         
+        T_20_StringToNumbers t = new T_20_StringToNumbers();
+        String str = "345";
+//        String str = "-345";
+//        String str = "+345";
+//        String str = "+";
+//        String str = "-";
+//        String str = "";        //字符串长度为0
+//        String str = null;      //字符串为空
+//        String str = "34t5";    //存在非数字字符
+//        String str = "3451111111111111111111111111111111111111111111111111111111111111111";           //溢出
+
+        try {
+            int result = t.StringToInt(str);
+            System.out.println(result);
+        } catch (MyException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
 
