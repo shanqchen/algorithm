@@ -23,8 +23,8 @@ public class InsertSort {
         for(i = 1; i < nums.length; i++){
             j = i;
             target = nums[i];
-            while(j > 0 & nums[j] < nums[j - 1]){
-                nums[j] = nums[j - 1];
+            while(j > 0 && target < nums[j-1]){
+                nums[j] = nums[j-1];
                 j--;
             }
             nums[j] = target;
@@ -32,7 +32,8 @@ public class InsertSort {
     }
     
     public static void main(String[] args) {
-        int[] nums = {1,3,2,5,4,7,9};
+//        int[] nums = {1,3,2,5,4,7,9};
+        int[] nums = {8, 9, 1, 7, 2, 3, 5, 6, 0};
         SortUtil.print(nums);
         insertSort(nums);
         SortUtil.print(nums);
